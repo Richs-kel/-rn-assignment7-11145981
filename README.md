@@ -38,10 +38,11 @@ This is a React Native mobile application for viewing and managing a list of pro
         await AsyncStorage.setItem('cart', JSON.stringify(cart));
       } catch (error) {
         console.error(error);
-      }![WhatsApp Image 2024-07-12 at 14 06 56_43cb999d](https://github.com/user-attachments/assets/ae3a0db6-35e9-4303-ae48-32f81ed9f73c)
+      }
+    };
+    ```
 
-    };![WhatsApp Image 2024-07-12 at 14 06 56_bdd4f242](https://github.com/user-attachments/assets/2154edc4-fe09-4aa3-8304-aa7c01b1a1d5)
-
-    ```![WhatsApp Image 2024-07-12 at 14 06 56_15333c4c](https://github.com/user-attachments/assets/df083386-f5de-46bb-84c2-9c7ed6d2eeb2)
-
+![WhatsApp Image 2024-07-12 at 14 06 56_99c31b02](https://github.com/user-attachments/assets/dc1891a6-7230-41f8-9b2a-9f25a3b0a841)
+![WhatsApp Image 2024-07-12 at 14 06 56_185d4f74](https://github.com/user-attachments/assets/a831df87-1999-4d3e-816c-a0d83f86416f)
+![WhatsApp Image 2024-07-12 at 14 06 56_addca763](https://github.com/user-attachments/assets/98eb18e1-329b-438b-aeaa-d85a00c329ff)
 
