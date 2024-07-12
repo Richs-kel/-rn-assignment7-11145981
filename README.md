@@ -1,49 +1,79 @@
-# -rn-assignment7-11145981
+This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+# Getting Started
 
-## Description
-This is a React Native mobile application for viewing and managing a list of products. Users can view available products, see detailed information about each product, and add or remove products from their cart. Data is fetched from an external API, and cart items are stored locally on the device.
+>**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
-## Design Choices
-1. **Component-Based Architecture**: The app is divided into multiple components (`HomeScreen`, `ProductDetailScreen`, `CartScreen`) to ensure a modular and maintainable codebase.
-2. **Drawer Navigation**: Implemented using `react-navigation` to provide easy navigation between screens.
-3. **External API for Products**: Used `axios` to fetch product data asynchronously, ensuring up-to-date information.
-4. **Local Storage**: Utilized `AsyncStorage` to store cart items locally, ensuring data persistence across app sessions.
+## Step 1: Start the Metro Server
 
-## Data Storage Implementation
-- **AsyncStorage**: Used to store selected items in the cart. When a user adds or removes items, the cart is updated in `AsyncStorage`, allowing for persistence.
+First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
+To start Metro, run the following command from the _root_ of your React Native project:
 
+```bash
+# using npm
+npm start
 
+# OR using Yarn
+yarn start
+```
 
-## External API
-- Products are fetched from [API URL]. Example request:
-    ```javascript
-    axios.get('https://api.example.com/products')
-      .then(response => {
-        setProducts(response.data);
-      })
-      .catch(error => {
-        console.error(error);
-      });
-    ```
+## Step 2: Start your Application
 
-## Local Storage
-- Example of adding an item to the cart and storing it in `AsyncStorage`:
-    ```javascript
-    const addToCart = async (product) => {
-      try {
-        let cart = await AsyncStorage.getItem('cart');
-        cart = cart ? JSON.parse(cart) : [];
-        cart.push(product);
-        await AsyncStorage.setItem('cart', JSON.stringify(cart));
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    ```![WhatsApp Image 2024-07-12 at 14 06 56_385e8257](https://github.com/user-attachments/assets/6900e836-ae26-4cfd-abb8-dc033d36df5f)
+Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
 
-    
-![WhatsApp Image 2024-07-12 at 14 06 56_296a902f](https://github.com/user-attachments/assets/ae7e66f4-8af4-4a05-9948-48f573fe4a19)
+### For Android
 
-![WhatsApp Image 2024-07-12 at 14 06 56_15776c00](https://github.com/user-attachments/assets/99ddd6c8-a444-4860-bf3b-dc29e5fac896)
+```bash
+# using npm
+npm run android
+
+# OR using Yarn
+yarn android
+```
+
+### For iOS
+
+```bash
+# using npm
+npm run ios
+
+# OR using Yarn
+yarn ios
+```
+
+If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+
+This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+
+## Step 3: Modifying your App
+
+Now that you have successfully run the app, let's modify it.
+
+1. Open `App.tsx` in your text editor of choice and edit some lines.
+2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+
+   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+
+## Congratulations! :tada:
+
+You've successfully run and modified your React Native App. :partying_face:
+
+### Now what?
+
+- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
+- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+
+# Troubleshooting
+
+If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+
+# Learn More
+
+To learn more about React Native, take a look at the following resources:
+
+- [React Native Website](https://reactnative.dev) - learn more about React Native.
+- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
+- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
+- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
+- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
